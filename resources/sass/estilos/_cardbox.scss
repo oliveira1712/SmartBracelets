@@ -1,0 +1,372 @@
+.blog {
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    background-size: 65%;
+}
+
+.blog .blog-post {
+    padding-top: 6rem;
+}
+
+.blog-post .blog-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+    max-height: 570px;
+}
+
+.blog-post .blog-content img {
+    min-height: 384px;
+}
+
+.blog-content .blog-title {
+    padding: 2rem 0;
+}
+
+/*.blog-content span{
+    display: block;
+}*/
+
+section .container .owl-nav {
+    position: absolute;
+    top: 1%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: yellow;
+    background: transparent;
+    font-size: 2rem;
+}
+
+.owl-next {
+    background-color: transparent !important;
+}
+
+.owl-nav-next {
+    background-color: #181818 !important;
+}
+
+.owl-nav-prev {
+    background-color: #202020 !important;
+}
+
+.owl-nav-prev:hover {
+    background-color: #363636 !important;
+}
+
+.owl-nav-next:hover {
+    background-color: #363636 !important;
+}
+
+.owl-prev {
+    background-color: transparent !important;
+}
+
+.owl-prev:hover {
+    background-color: white !important;
+}
+
+.example_d {
+    color: #e05762 !important;
+    text-transform: uppercase;
+    background: #ffffff;
+    padding: 8px;
+    border: 3px solid #e05762 !important;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+
+.example_d:hover {
+    color: #494949 !important;
+    border-radius: 50px;
+    border-color: #494949 !important;
+    transition: all 0.3s ease 0s;
+}
+
+//=== Drawing effect
+
+@mixin buttoneventos-border-drawing(
+    $color: #ccc,
+    $hover: black,
+    $width: 2px,
+    $vertical: top,
+    $horizontal: left,
+    $duration: 0.25s
+) {
+    box-shadow: inset 0 0 0 $width $color;
+    color: $color;
+    transition: color $duration $duration/3;
+    position: relative;
+
+    &::before,
+    &::after {
+        border: 0 solid transparent;
+        box-sizing: border-box;
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        width: 0;
+        height: 0;
+
+        #{$vertical}: 0;
+        #{$horizontal}: 0;
+    }
+
+    &::before {
+        $h-side: if($horizontal == "left", "right", "left");
+
+        border-#{$vertical}-width: $width;
+        border-#{$h-side}-width: $width;
+    }
+
+    &::after {
+        $v-side: if($vertical == "top", "bottom", "top");
+
+        border-#{$v-side}-width: $width;
+        border-#{$horizontal}-width: $width;
+    }
+
+    &:hover {
+        color: $hover;
+
+        &::before,
+        &::after {
+            border-color: $hover;
+            transition: border-color 0s, width $duration, height $duration;
+            width: 100%;
+            height: 100%;
+        }
+
+        &::before {
+            transition-delay: 0s, 0s, $duration;
+        }
+
+        &::after {
+            transition-delay: 0s, $duration, 0s;
+        }
+    }
+}
+
+.draw-border {
+    @include buttoneventos-border-drawing(#e05762, #494949, 2px, bottom, right);
+}
+
+//=== Button styling, semi-ignore
+.buttoneventos {
+    background: none !important;
+    border: none !important;
+    cursor: pointer;
+    line-height: 1.5;
+    font: 700 1.2rem "Roboto Slab", sans-serif;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+
+    &:focus {
+        outline: 2px dotted #55d7dc;
+    }
+}
+
+@keyframes rotatebtninfoeventos {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.rainbow-breve {
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        background-color: #399953;
+        background-repeat: no-repeat;
+        background-size: 50% 50%, 50% 50%;
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        background-image: linear-gradient(#d53e33, #d53e33),
+            linear-gradient(#377af5, #377af5), linear-gradient(#d53e33, #d53e33),
+            linear-gradient(#377af5, #377af5);
+        animation: rotatebtninfoeventos 4s linear infinite;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        background: white;
+        border-radius: 5px;
+    }
+}
+
+.rainbow-terminado {
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        background-color: #399953;
+        background-repeat: no-repeat;
+        background-size: 50% 50%, 50% 50%;
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        background-image: linear-gradient(#e4ac45, #e4ac45),
+            linear-gradient(#5bc0be, #5bc0be), linear-gradient(#e4ac45, #e4ac45),
+            linear-gradient(#5bc0be, #5bc0be);
+        animation: rotatebtninfoeventos 4s linear infinite;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        background: white;
+        border-radius: 5px;
+    }
+}
+
+.rainbow-cancelado {
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        background-color: #399953;
+        background-repeat: no-repeat;
+        background-size: 50% 50%, 50% 50%;
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        background-image: linear-gradient(#d53e33, #d53e33),
+            linear-gradient(#222222, #222222), linear-gradient(#d53e33, #d53e33),
+            linear-gradient(#222222, #222222);
+        animation: rotatebtninfoeventos 4s linear infinite;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        background: white;
+        border-radius: 5px;
+    }
+}
+
+.rainbow-decorrer {
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 2rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        background-color: #399953;
+        background-repeat: no-repeat;
+        background-size: 50% 50%, 50% 50%;
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        background-image: linear-gradient(#377af5, #377af5),
+            linear-gradient(#399953, #399953), linear-gradient(#377af5, #377af5),
+            linear-gradient(#399953, #399953);
+        animation: rotatebtninfoeventos 4s linear infinite;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        background: white;
+        border-radius: 5px;
+    }
+}
+
+.cardpesqheight {
+    height: 480px;
+}
+
+.cardpesqnheight {
+    height: 450px;
+}
+
+@media only screen and (max-width: 700px) {
+    .rainbow-breve,
+    .rainbow-terminado,
+    .rainbow-decorrer {
+        width: 120px;
+        height: 50px;
+    }
+
+    .cardpesqheight {
+        height: 430px;
+    }
+
+    .cardpesqnheight {
+        height: 380px;
+    }
+}

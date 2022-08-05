@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital@1&display=swap");
+//variaveis
+@import "./estilos/variaveis";
+
+//homepage
+@import "./estilos/homepage";
+
+//footer
+@import "./estilos/footer";
+
+//cardbox
+@import "./estilos/cardbox";
+
+//eventospage
+@import "./estilos/eventospage";
+
+//loading
+@import "./estilos/spinnerwrapper";
+
+//crud
+@import "./estilos/crud";
+
+//carbox para os tipos de eventos
+@import "./estilos/cardboxtpeventos";
+
+//mediaqueries
+@import "./estilos/mediaqueries";
+
+//detalheseventos
+@import "./estilos/detalheseventos";
+
+//pesquisar eventos
+@import "./estilos/pesquisaeventos";
+
+//pesquisar eventos
+@import "./estilos/login";
+
+//pesquisar perfil
+@import "./estilos/userprofile";
+
+//pesquisar comprarbilhete
+@import "./estilos/comprarbilhete";
+
+//pesquisar shopcart
+@import "./estilos/shopcart";
+
+//fancyspinner
+@import "./estilos/fancyspinner";
+
+//checkoutpage
+@import "./estilos/checkout";
+
+//scrollbar
+@import "./estilos/scrollbar";
+
+//pulseira
+@import "./estilos/pulseira";
+
+//pulseira
+@import "./estilos/promotor";
+
+@import "./estilos/teste";
+
+//algumas features do bootstrap
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/input-group";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/media";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/print";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/transitions";

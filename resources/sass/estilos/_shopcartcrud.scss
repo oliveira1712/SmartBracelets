@@ -1,0 +1,71 @@
+.aumentaletra {
+    font-size: 1.2em;
+}
+
+.plusbtn {
+    color: black !important;
+    background-color: #f8f9fa !important;
+    width: 27.75px;
+    height: 24.5px;
+    margin: 5px -2px 5px 1px;
+    padding: 2.75px 6.5px;
+    border-radius: 50%;
+    border-color: lightgrey;
+}
+
+.minusbtn {
+    margin-left: -1px;
+    color: black !important;
+    background-color: #f8f9fa !important;
+    width: 27.75px;
+    height: 24.5px;
+    margin: 5px -2px 5px 1px;
+    padding: 2.75px 6.5px;
+    border-radius: 50%;
+    border-color: lightgrey;
+}
+
+.minusbtn:hover,
+.plusbtn:hover {
+    border-color: transparent;
+    background-color: #dde3e7 !important;
+}
+
+.qtd {
+    display: inline-block !important;
+    width: 35px !important;
+    height: 24.5px !important;
+    font-size: 0.8em !important;
+}
+
+.maismenos {
+    font-size: 0.7em;
+    margin-top: -2px;
+}
+
+.totalinclet {
+    font-size: 1.4em;
+}
+
+.falldelete {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+.slideremove {
+    transform: translateX(-50rem);
+    opacity: 0;
+}
+
+.slideadd {
+    transform: translateX(50rem);
+    opacity: 0;
+}
+
+.slideup {
+    opacity: 1 !important;
+}
+
+.slidedown {
+    opacity: 0;
+}

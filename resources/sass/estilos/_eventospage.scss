@@ -1,0 +1,133 @@
+.topicomusica{
+    font-family: 'Hind Vadodara', sans-serif;
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 4rem;
+    color: #f79e00;
+}
+
+.topicoteatro{
+    font-family: 'Hind Vadodara', sans-serif;
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 4rem;
+    color: #508AA8;
+}
+
+.topicoarte{
+    font-family: 'Hind Vadodara', sans-serif;
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 4rem;
+    color: #B73A33;
+}
+
+
+.topicodesporto{
+    font-family: 'Hind Vadodara', sans-serif;
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 4rem;
+    color: #2A7221;
+}
+
+.btn{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px; /* Meter o texto correto de volta */
+}
+
+.topico-btn{
+    font-size: 1.1rem;
+    background-color: #41414A;
+    padding: .9rem 1.8rem;
+    color: #fff;
+    border-radius: .4rem;
+    transition: background-color .5s;
+}
+
+.topico-btn:hover,
+.topico-btn:focus{
+    color: #fff;
+    background-color: #74747B;
+}
+
+
+.titulo{
+    color: #151515;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.headerrow{
+    padding: 1.5rem;   
+    background-color: #1f1f1f;
+    font-size: 2em;
+    text-align: center;
+    color: white;
+}
+
+.cantoredondoesq{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.cantoredondodir{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.bodyrow{
+    padding: 1.5rem;
+    border-radius: 25px;
+    font-size: 1.5em;
+    font-weight: 1000;
+    text-align: center;
+    color: black;
+}
+
+
+.btneventos {
+    border: none;
+    
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    font-size: 10px;
+    background-color: #222;
+    padding: 12px 36px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+  }
+  
+  .btneventos span {
+    position: relative; 
+    z-index: 1;
+  }
+  
+  .btneventos:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: grey;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  }
+  
+  .btneventos:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+  
